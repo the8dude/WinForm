@@ -86,6 +86,7 @@ namespace Exercice_3___ListBox_et_ComboBox
             {
                 button1.Enabled = false;
             }
+            comboBox1.Text = "";
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -117,9 +118,26 @@ namespace Exercice_3___ListBox_et_ComboBox
 
         private void button5_Click(object sender, EventArgs e)
         {
-            
+            if (listBox1.SelectedIndex > 0)
+            {
+                int i = listBox1.SelectedIndex;
+                object objet = listBox1.SelectedItem;
+                listBox1.Items.RemoveAt(i);
+                listBox1.Items.Insert(i - 1, objet);
+                listBox1.SelectedIndex = i - 1;
+            }
         }
-    
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex < listBox1.Items.Count - 1)
+            {
+                int i = listBox1.SelectedIndex;
+                object objet = listBox1.SelectedItem;
+                listBox1.Items.RemoveAt(i);
+                listBox1.Items.Insert(i + 1, objet);
+                listBox1.SelectedIndex = i + 1;
+            }
+        }
 
 
 
@@ -165,7 +183,7 @@ namespace Exercice_3___ListBox_et_ComboBox
 
 
 
-    private void comboBox1_DropDownStyleChanged(object sender, EventArgs e)
+        private void comboBox1_DropDownStyleChanged(object sender, EventArgs e)
         {
 
         }
@@ -181,6 +199,8 @@ namespace Exercice_3___ListBox_et_ComboBox
         {
 
         }
+
+        
     }
 
 }

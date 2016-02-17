@@ -200,7 +200,10 @@ namespace Exercice_3___ListBox_et_ComboBox
 
         }
 
-        
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

@@ -139,6 +139,7 @@
             this.label7.Size = new System.Drawing.Size(304, 73);
             this.label7.TabIndex = 9;
             this.label7.Text = "                ";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // numericUpDown1
             // 

@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercice 4 - Défilement", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Synthese", "Synthese\Synthese.csproj", "{4A9462CA-C2E2-4E15-BC20-8EB29F9B35FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{AE185570-5BF3-4D6F-965E-FE71F0C36D2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{4A9462CA-C2E2-4E15-BC20-8EB29F9B35FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A9462CA-C2E2-4E15-BC20-8EB29F9B35FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A9462CA-C2E2-4E15-BC20-8EB29F9B35FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE185570-5BF3-4D6F-965E-FE71F0C36D2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE185570-5BF3-4D6F-965E-FE71F0C36D2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE185570-5BF3-4D6F-965E-FE71F0C36D2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE185570-5BF3-4D6F-965E-FE71F0C36D2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

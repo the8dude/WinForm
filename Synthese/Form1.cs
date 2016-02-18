@@ -24,7 +24,7 @@ namespace Synthese
             listBox1.SelectedIndex = 0;
             textBox1.Select();
         }
-    
+
         private void hScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
             //LABEL 5
@@ -34,7 +34,7 @@ namespace Synthese
                 hScrollBar1.Value = (hScrollBar1.Value / 1) * 1;
                 label5.Text = hScrollBar1.Value.ToString();
                 hScrollBar1.LargeChange = 10;
-                hScrollBar1.Minimum = 1;
+                hScrollBar1.Minimum = 0;
                 hScrollBar1.Maximum = 189;
             }
             if (listBox1.SelectedIndex == 1)
@@ -91,7 +91,7 @@ namespace Synthese
                 label8.Text = (hScrollBar1.Value / 12).ToString();
             }
 
-            
+
 
 
         }
@@ -114,9 +114,16 @@ namespace Synthese
             }
             else
             {
-                label10.Visible = true;
-                label10.Text = "Erreur";
-                label10.ForeColor = Color.Red;
+                if (textBox1.Text == "")
+                {
+                    label10.Visible = false;
+                }
+                else
+                {
+                    label10.Visible = true;
+                    label10.Text = "Erreur";
+                    label10.ForeColor = Color.Red;
+                }
             }
         }
 
@@ -131,10 +138,18 @@ namespace Synthese
             }
             else
             {
-                label11.Visible = true;
-                label11.Text = "Uniquement \n des chiffres";
-                label11.ForeColor = Color.Red;
+                if (textBox2.Text == "")
+                {
+                    label10.Visible = false;
+                }
+                else
+                {
+                    label11.Visible = true;
+                    label11.Text = "Uniquement \n des chiffres";
+                    label11.ForeColor = Color.Red;
+                }
             }
+
             if (textBox2.Text.Length > 10)
             {
                 label11.Visible = true;
@@ -164,15 +179,15 @@ namespace Synthese
 
                 if (radioButton1.Checked == true)
                 {
-                   label9.Text = (((k * (t7 / 12)) / (1 - (Math.Pow((1 + (t7 / 12)), -n))))).ToString() + " €";
+                    label9.Text = (((k * (t7 / 12)) / (1 - (Math.Pow((1 + (t7 / 12)), -n))))).ToString() + " €";
                 }
                 if (radioButton2.Checked == true)
                 {
-                   label9.Text = (((k * (t8 / 12)) / (1 - (Math.Pow((1 + (t8 / 12)), -n))))).ToString() + " €";
+                    label9.Text = (((k * (t8 / 12)) / (1 - (Math.Pow((1 + (t8 / 12)), -n))))).ToString() + " €";
                 }
                 if (radioButton3.Checked == true)
                 {
-                   label9.Text = (((k * (t9 / 12)) / (1 - (Math.Pow((1 + (t9 / 12)), -n))))).ToString() + " €";
+                    label9.Text = (((k * (t9 / 12)) / (1 - (Math.Pow((1 + (t9 / 12)), -n))))).ToString() + " €";
                 }
             }
 
@@ -274,7 +289,7 @@ namespace Synthese
         }
 
 
-      //INUTILE//
+        //INUTILE//
 
         private void label8_Click(object sender, EventArgs e)
         {
@@ -288,12 +303,12 @@ namespace Synthese
 
         private void label8_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

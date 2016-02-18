@@ -44,6 +44,7 @@ namespace Synthese
                 hScrollBar1.LargeChange = 20;
                 hScrollBar1.Minimum = 0;
                 hScrollBar1.Maximum = 199;
+
             }
             if (listBox1.SelectedIndex == 2)
             {

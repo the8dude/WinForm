@@ -118,7 +118,6 @@
             // 
             this.hScrollBar1.Location = new System.Drawing.Point(190, 102);
             this.hScrollBar1.Maximum = 180;
-            this.hScrollBar1.Minimum = 1;
             this.hScrollBar1.Name = "hScrollBar1";
             this.hScrollBar1.Size = new System.Drawing.Size(143, 17);
             this.hScrollBar1.TabIndex = 7;
@@ -148,6 +147,7 @@
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "9 %";
             this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -159,6 +159,7 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "8 %";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton1
             // 
@@ -170,6 +171,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "7 %";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // label6
             // 
@@ -269,6 +271,7 @@
             this.label11.TabIndex = 17;
             this.label11.Text = "Erreur";
             this.label11.Visible = false;
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // Form1
             // 

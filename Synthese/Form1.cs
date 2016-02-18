@@ -27,7 +27,10 @@ namespace Synthese
 
         private void hScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
+            label9.Text = "0 €";
+
             //LABEL 5
+
 
             if (listBox1.SelectedIndex == 0)
             {
@@ -130,7 +133,17 @@ namespace Synthese
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
+            label9.Text = "0 €";
+
             Regex re_capital = new Regex(@"^[0-9]{1,10}$");
+
+            if (textBox2.Text == "")
+            {
+                label11.Visible = false;
+            }
+
+            else
+
             if (re_capital.IsMatch(textBox2.Text))
             {
                 label11.Visible = true;
@@ -139,16 +152,9 @@ namespace Synthese
             }
             else
             {
-                if (textBox2.Text == "")
-                {
-                    label10.Visible = false;
-                }
-                else
-                {
-                    label11.Visible = true;
-                    label11.Text = "Uniquement \n des chiffres";
-                    label11.ForeColor = Color.Red;
-                }
+                label11.Visible = true;
+                label11.Text = "Uniquement \n des chiffres";
+                label11.ForeColor = Color.Red;
             }
 
             if (textBox2.Text.Length > 10)
@@ -232,7 +238,7 @@ namespace Synthese
                 }
                 if (radioButton2.Checked == true)
                 {
-                    label9.Text = (((k * (t8 / 3)) / (1 - (Math.Pow((1 + (t8 / 3)), -n))))).ToString() + " €";
+                    label9.Text = (((k * (t8 / 4)) / (1 - (Math.Pow((1 + (t8 / 4)), -n))))).ToString() + " €";
                 }
                 if (radioButton3.Checked == true)
                 {
@@ -308,6 +314,26 @@ namespace Synthese
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            label9.Text = "0 €";
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            label9.Text = "0 €";
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            label9.Text = "0 €";
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            label9.Text = "0 €";
+        }
+
+        private void label11_Click(object sender, EventArgs e)
         {
 
         }
